@@ -67,18 +67,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Shopperly Color Palette
+				// Shopperly Color Palette - Updated to purple
 				shopperly: {
-					light: '#F5F7FA',
-					accent: '#3B82F6',
-					dark: '#1E293B',
+					light: '#F8F5FF',
+					accent: '#9B87F5',
+					dark: '#1A1F2C',
 					muted: '#94A3B8',
-					border: '#E2E8F0',
-					hover: '#2563EB',
+					border: '#E9E3F5',
+					hover: '#7E69AB',
 					background: '#FFFFFF',
 					card: '#FFFFFF',
-					primary: '#3B82F6',
-					secondary: '#E2E8F0',
+					primary: '#9B87F5',
+					secondary: '#E9E3F5',
 				}
 			},
 			borderRadius: {
