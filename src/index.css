@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,24 +31,17 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 221.2 83.2% 53.3%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,7 +55,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -96,6 +90,74 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-shopperly-light text-shopperly-dark font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-shopperly-muted/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-shopperly-muted/50;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-shopperly-border rounded-xl shadow-glass;
+  }
+  
+  .button-primary {
+    @apply bg-shopperly-accent text-white rounded-lg px-6 py-3 font-medium shadow-button transition-all duration-200 hover:bg-shopperly-hover hover:shadow-lg active:transform active:scale-95;
+  }
+  
+  .button-secondary {
+    @apply bg-white text-shopperly-dark border border-shopperly-border rounded-lg px-6 py-3 font-medium shadow-button transition-all duration-200 hover:bg-shopperly-light hover:shadow-md active:transform active:scale-95;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent;
+  }
+  
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold mb-4 text-center;
+  }
+  
+  .section-subheading {
+    @apply text-xl text-shopperly-muted max-w-3xl mx-auto text-center mb-12;
+  }
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
 }
